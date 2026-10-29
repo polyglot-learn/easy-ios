@@ -2,10 +2,16 @@ name: Example apps
 
 on:
   push:
+    branches: [main]
     paths: ["examples/**", "scripts/**", ".swift-format", "Makefile", ".github/workflows/examples.yml"]
   pull_request:
     paths: ["examples/**", "scripts/**", ".swift-format", "Makefile", ".github/workflows/examples.yml"]
   workflow_dispatch:
+
+# A newer push to the same branch or PR replaces the run in progress.
+concurrency:
+  group: examples-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   lint:
