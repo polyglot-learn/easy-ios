@@ -1,0 +1,30 @@
+name: Example apps
+
+on:
+  push:
+    paths: ["examples/**", "scripts/**", ".swift-format", "Makefile", ".github/workflows/examples.yml"]
+  pull_request:
+    paths: ["examples/**", "scripts/**", ".swift-format", "Makefile", ".github/workflows/examples.yml"]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Use the newest Xcode
+        run: sudo xcode-select -s "$(ls -d /Applications/Xcode_*.app | sort -V | tail -1)"
+      - run: make lint
+
+  test:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [Tasks, Habits, Budget, Flashcards, Recipes, MoodJournal, Packing, Converter, Forecast, Headlines]
+    steps:
+      - uses: actions/checkout@v7
+      - name: Use the newest Xcode
+        run: sudo xcode-select -s "$(ls -d /Applications/Xcode_*.app | sort -V | tail -1)"
+      - run: xcodebuild -version
+      - run: make test APP=examples/${{ matrix.app }}
