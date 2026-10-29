@@ -1,0 +1,24 @@
+id: push-notifications
+order: 14
+title: Push notifications
+question: "If the app sends push notifications, how should they be delivered?"
+why: "Push keeps users coming back, but needs a server to decide when to send."
+skip_for_beginners: true
+note: "Push notifications require the Apple Developer Program. Local notifications (scheduled on the device) don't need a server or this decision."
+last_verified: null
+options:
+  - id: apns
+    name: APNs directly
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "Apple-only apps, or apps using CloudKit subscriptions, which send pushes for you."
+    tradeoffs: "Without CloudKit, your server must talk to APNs and manage device tokens."
+    url: https://developer.apple.com/documentation/usernotifications
+  - id: fcm
+    name: Firebase Cloud Messaging
+    cost: free
+    level: advanced
+    pick_when: "You also ship on Android or want a console for sending campaigns."
+    tradeoffs: "Adds the Firebase SDK; still requires APNs setup underneath."
+    url: https://firebase.google.com/docs/cloud-messaging

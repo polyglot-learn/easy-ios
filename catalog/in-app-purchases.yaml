@@ -1,0 +1,25 @@
+id: in-app-purchases
+order: 13
+title: In-app purchases
+question: "If the app sells anything, how should purchases and subscriptions work?"
+why: "Digital goods on iOS must go through Apple's in-app purchase system."
+skip_for_beginners: true
+note: "Selling anything requires the Apple Developer Program and a Paid Apps agreement in App Store Connect."
+last_verified: 2026-10-29
+options:
+  - id: storekit2
+    name: StoreKit 2
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "Most apps. Native, async/await API, with built-in SwiftUI views for paywalls."
+    tradeoffs: "Subscription analytics and server-side receipt checks are up to you."
+    url: https://developer.apple.com/storekit/
+  - id: revenuecat
+    name: RevenueCat
+    cost: free-tier
+    cost_note: "Free up to $2,500 monthly tracked revenue (gross, before Apple's cut), then 1% of tracked revenue."
+    level: advanced
+    pick_when: "Subscription businesses that want dashboards, experiments, and the same purchases on Android or web."
+    tradeoffs: "A third-party dependency on your revenue path; costs scale with revenue."
+    url: https://www.revenuecat.com/pricing/

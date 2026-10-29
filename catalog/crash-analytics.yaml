@@ -1,0 +1,32 @@
+id: crash-analytics
+order: 12
+title: Crashes and analytics
+question: "How do you want to find out about crashes and how the app is used?"
+why: "Without crash reports you only learn about bugs from bad reviews."
+skip_for_beginners: true
+last_verified: 2026-10-29
+options:
+  - id: xcode-organizer
+    name: Xcode Organizer
+    default: true
+    cost: free
+    cost_note: "Built in. Reports come from TestFlight and App Store users who share diagnostics."
+    level: beginner
+    pick_when: "Most apps. Crash logs and basic metrics with no SDK and no privacy disclosures to add."
+    tradeoffs: "Only users who opt in to sharing diagnostics; no custom events."
+    url: https://developer.apple.com/documentation/xcode/acquiring-crash-reports-and-diagnostic-logs
+  - id: crashlytics
+    name: Firebase Crashlytics
+    cost: free
+    level: advanced
+    pick_when: "You need real-time crash alerts with more detail than the Organizer."
+    tradeoffs: "Adds the Firebase SDK and Google data collection to disclose in your privacy label."
+    url: https://firebase.google.com/docs/crashlytics
+  - id: telemetrydeck
+    name: TelemetryDeck
+    cost: free-tier
+    cost_note: "New accounts since July 2026 get 50,000 free events per month (older accounts keep 100,000)."
+    level: advanced
+    pick_when: "You want usage analytics (which screens and features are used) while staying privacy-friendly."
+    tradeoffs: "Analytics, not crash reporting; paid beyond the free events."
+    url: https://telemetrydeck.com
