@@ -71,6 +71,27 @@ questionnaire (coming next) and any tooling can be generated from it.
 The YAML files are the source of truth. If this table and a YAML file disagree,
 the YAML wins.
 
+## Start an app
+
+```sh
+make new NAME=MyApp CATEGORY=productivity SYMBOL=star.fill COLOR=0A84FF
+make test APP=apps/MyApp
+```
+
+This creates `apps/MyApp` with every default already applied: a plain Xcode
+project targeting iOS 17, a SwiftUI app, Swift Testing and XCUITest targets, an
+app icon, a String Catalog, and a `CLAUDE.md` that tells AI agents the
+conventions. Open `apps/MyApp/MyApp.xcodeproj` in Xcode and press Run.
+
+The project uses folder-synchronized groups, so files you add to the app or test
+folders are picked up automatically and the project file rarely changes.
+
+## Example apps
+
+[`examples/`](examples) has ten complete apps, one per App Store category, built
+only with the defaults: Tasks, Habits, Budget, Flashcards, Recipes, Mood Journal,
+Packing, Converter, Forecast, and Headlines. Each has unit tests and a UI test.
+
 ## Contributing
 
 ```sh
@@ -89,9 +110,11 @@ it weekly.
 ## Roadmap
 
 - [x] Decision catalog
+- [x] `make new` and `make test`, with every default applied
+- [x] Ten example apps
 - [ ] Questionnaire (beginner path: accept all defaults; advanced path: ask everything)
-- [ ] App template generated from the answers
-- [ ] `make new`, `make run`, `make test`, `make ship`
+- [ ] Generate non-default choices from the answers (e.g. CloudKit, Supabase, Fastlane)
+- [ ] `make ship`
 
 ## License
 
