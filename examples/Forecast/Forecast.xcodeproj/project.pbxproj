@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		7BDBBDAF7A60CB33B5D3CCD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20617F32742922538DD86651 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 576EB723D187BC10B58F80C9;
+			remoteInfo = Forecast;
+		};
+		777234C28A64B4C0C0005ABF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20617F32742922538DD86651 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 576EB723D187BC10B58F80C9;
+			remoteInfo = Forecast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		321F8A63465071764B891AD8 /* Forecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Forecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A42BAA1787D0F21652608531 /* ForecastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForecastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D34BD393146B4D70BB53E694 /* ForecastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForecastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		643B4F1015A442AEE3500F68 /* Forecast */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		BB622CA7E1B43387CBD725BA /* ForecastTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ForecastTests;
+			sourceTree = "<group>";
+		};
+		721EF1C1D04C8D885817DB16 /* ForecastUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ForecastUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96CC151D71B9CCC79C964675 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D141FD44BF693EB2997C649 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9876B914CDD1764FD6D9AF8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5D8F8F057C2556BC44E50DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10C27A411C47817447206372 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16BECEFF4C8C33073E245B7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24CE66F658F898236EFF0768 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		155A132CAD49311EEDEA2166 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3CD0D7CD04FC4517EAA68A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End build phase sections */
+
+/* Begin PBXGroup section */
+		BFA2DC6B6763FA9AEC5F9C66 = {
+			isa = PBXGroup;
+			children = (
+				643B4F1015A442AEE3500F68 /* Forecast */,
+				BB622CA7E1B43387CBD725BA /* ForecastTests */,
+				721EF1C1D04C8D885817DB16 /* ForecastUITests */,
+				A1767526871F48F99DBF3517 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1767526871F48F99DBF3517 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				321F8A63465071764B891AD8 /* Forecast.app */,
+				A42BAA1787D0F21652608531 /* ForecastTests.xctest */,
+				D34BD393146B4D70BB53E694 /* ForecastUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		576EB723D187BC10B58F80C9 /* Forecast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA2449DBDF0EE65258F84811 /* Build configuration list for PBXNativeTarget "Forecast" */;
+			buildPhases = (
+				9876B914CDD1764FD6D9AF8F /* Sources */,
+				96CC151D71B9CCC79C964675 /* Frameworks */,
+				8D141FD44BF693EB2997C649 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				643B4F1015A442AEE3500F68 /* Forecast */,
+			);
+			name = Forecast;
+			packageProductDependencies = (
+			);
+			productName = Forecast;
+			productReference = 321F8A63465071764B891AD8 /* Forecast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66787C8884BD51D6DA79BD5F /* ForecastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AC5F8C4F82A7769E9E09AAD /* Build configuration list for PBXNativeTarget "ForecastTests" */;
+			buildPhases = (
+				16BECEFF4C8C33073E245B7A /* Sources */,
+				C5D8F8F057C2556BC44E50DD /* Frameworks */,
+				10C27A411C47817447206372 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				070C5E1B7D42D06094F502C8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BB622CA7E1B43387CBD725BA /* ForecastTests */,
+			);
+			name = ForecastTests;
+			packageProductDependencies = (
+			);
+			productName = ForecastTests;
+			productReference = A42BAA1787D0F21652608531 /* ForecastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F00FF68FE7225D1C588FB9BE /* ForecastUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CF1A4AF148A7E038B31881F /* Build configuration list for PBXNativeTarget "ForecastUITests" */;
+			buildPhases = (
+				A3CD0D7CD04FC4517EAA68A1 /* Sources */,
+				24CE66F658F898236EFF0768 /* Frameworks */,
+				155A132CAD49311EEDEA2166 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4AB624113D95225EAA33DD6 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				721EF1C1D04C8D885817DB16 /* ForecastUITests */,
+			);
+			name = ForecastUITests;
+			packageProductDependencies = (
+			);
+			productName = ForecastUITests;
+			productReference = D34BD393146B4D70BB53E694 /* ForecastUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20617F32742922538DD86651 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					576EB723D187BC10B58F80C9 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					66787C8884BD51D6DA79BD5F = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 576EB723D187BC10B58F80C9;
+					};
+					F00FF68FE7225D1C588FB9BE = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 576EB723D187BC10B58F80C9;
+					};
+				};
+			};
+			buildConfigurationList = FE24DB703D8E799560B906FC /* Build configuration list for PBXProject "Forecast" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFA2DC6B6763FA9AEC5F9C66;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A1767526871F48F99DBF3517 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				576EB723D187BC10B58F80C9 /* Forecast */,
+				66787C8884BD51D6DA79BD5F /* ForecastTests */,
+				F00FF68FE7225D1C588FB9BE /* ForecastUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXTargetDependency section */
+		070C5E1B7D42D06094F502C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 576EB723D187BC10B58F80C9 /* Forecast */;
+			targetProxy = 7BDBBDAF7A60CB33B5D3CCD1 /* PBXContainerItemProxy */;
+		};
+		D4AB624113D95225EAA33DD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 576EB723D187BC10B58F80C9 /* Forecast */;
+			targetProxy = 777234C28A64B4C0C0005ABF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		322AED8E2192DAF8E9C5F68C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7AB51394A6006F80B6F0933C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		58DE2BAD211BE14BFDE86274 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Forecast";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.polyglotlearn.easyios.forecast;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		56E19DC0E2565B2CD79889A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Forecast";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.polyglotlearn.easyios.forecast;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		FA1D07588CAFF4526273D472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.polyglotlearn.easyios.forecast.tests;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Forecast.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Forecast";
+			};
+			name = Debug;
+		};
+		D7168ABF38FBD6C634DBD8E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.polyglotlearn.easyios.forecast.tests;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Forecast.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Forecast";
+			};
+			name = Release;
+		};
+		532409DDB78A07E55BE767D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_BUNDLE_IDENTIFIER = org.polyglotlearn.easyios.forecast.uitests;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = Forecast;
+			};
+			name = Debug;
+		};
+		0F0FE86EA311D002847044CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				PRODUCT_BUNDLE_IDENTIFIER = org.polyglotlearn.easyios.forecast.uitests;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TEST_TARGET_NAME = Forecast;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE24DB703D8E799560B906FC /* Build configuration list for PBXProject "Forecast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				322AED8E2192DAF8E9C5F68C /* Debug */,
+				7AB51394A6006F80B6F0933C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA2449DBDF0EE65258F84811 /* Build configuration list for PBXNativeTarget "Forecast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58DE2BAD211BE14BFDE86274 /* Debug */,
+				56E19DC0E2565B2CD79889A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AC5F8C4F82A7769E9E09AAD /* Build configuration list for PBXNativeTarget "ForecastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA1D07588CAFF4526273D472 /* Debug */,
+				D7168ABF38FBD6C634DBD8E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CF1A4AF148A7E038B31881F /* Build configuration list for PBXNativeTarget "ForecastUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				532409DDB78A07E55BE767D0 /* Debug */,
+				0F0FE86EA311D002847044CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20617F32742922538DD86651 /* Project object */;
+}
