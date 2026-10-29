@@ -4,7 +4,7 @@ title: Backend / sync
 question: "Does data need to live on a server or sync between devices?"
 why: "A backend adds sync and sharing but also accounts, costs, and more to maintain."
 skip_for_beginners: false
-last_verified: null
+last_verified: 2026-10-29
 options:
   - id: none
     name: None (local only)
@@ -24,7 +24,7 @@ options:
   - id: supabase
     name: Supabase
     cost: free-tier
-    cost_note: "Free tier available; check the current limits, including pausing of inactive free projects."
+    cost_note: "Free plan: 2 active projects, 500 MB database, 50,000 monthly active users. Free projects pause after 1 week of inactivity."
     level: advanced
     pick_when: "You need a real backend: shared data between users, a web or Android app, or server logic."
     tradeoffs: "A server to manage, and paid plans once you outgrow the free tier."
