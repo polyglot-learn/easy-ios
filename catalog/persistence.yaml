@@ -1,0 +1,23 @@
+id: persistence
+order: 5
+title: Local storage
+question: "Where should the app store data on the device?"
+why: "Almost every app saves something. Changing storage later means migrating users' data."
+skip_for_beginners: true
+last_verified: null
+options:
+  - id: swiftdata
+    name: SwiftData
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "Most apps. Define models in Swift and they save automatically, with built-in SwiftUI support."
+    tradeoffs: "Less control over queries and performance than raw SQLite."
+    url: https://developer.apple.com/documentation/swiftdata
+  - id: grdb
+    name: GRDB (SQLite)
+    cost: free
+    level: advanced
+    pick_when: "Complex queries, large datasets, or you want to write SQL."
+    tradeoffs: "More code, and you manage the schema and migrations yourself."
+    url: https://github.com/groue/GRDB.swift

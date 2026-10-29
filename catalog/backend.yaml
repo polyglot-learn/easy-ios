@@ -1,0 +1,31 @@
+id: backend
+order: 6
+title: Backend / sync
+question: "Does data need to live on a server or sync between devices?"
+why: "A backend adds sync and sharing but also accounts, costs, and more to maintain."
+skip_for_beginners: false
+last_verified: null
+options:
+  - id: none
+    name: None (local only)
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "Data stays on one device: utilities, trackers, games, first apps."
+    tradeoffs: "No sync between a user's devices and no sharing between users."
+  - id: cloudkit
+    name: CloudKit
+    cost: included
+    cost_note: "Included with the Apple Developer Program with generous storage that grows with your user count."
+    level: beginner
+    pick_when: "Sync a user's data across their own Apple devices, with no server code to write."
+    tradeoffs: "Apple platforms only; no web or Android client."
+    url: https://developer.apple.com/icloud/cloudkit/
+  - id: supabase
+    name: Supabase
+    cost: free-tier
+    cost_note: "Free tier available; check the current limits, including pausing of inactive free projects."
+    level: advanced
+    pick_when: "You need a real backend: shared data between users, a web or Android app, or server logic."
+    tradeoffs: "A server to manage, and paid plans once you outgrow the free tier."
+    url: https://supabase.com/docs/reference/swift/introduction

@@ -1,0 +1,23 @@
+id: networking
+order: 8
+title: Networking
+question: "How should the app call web APIs?"
+why: "Most apps fetch data from somewhere; one consistent client avoids scattered request code."
+skip_for_beginners: true
+last_verified: null
+options:
+  - id: urlsession
+    name: URLSession + async/await
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "Almost all apps. Built in, no dependency, and async/await makes it simple."
+    tradeoffs: "You write small helpers yourself for things like retries."
+    url: https://developer.apple.com/documentation/foundation/urlsession
+  - id: alamofire
+    name: Alamofire
+    cost: free
+    level: advanced
+    pick_when: "Complex APIs where you want built-in retries, request interceptors, and upload progress."
+    tradeoffs: "A third-party dependency for something the system mostly covers."
+    url: https://github.com/Alamofire/Alamofire

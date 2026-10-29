@@ -1,0 +1,34 @@
+id: auth
+order: 7
+title: User accounts
+question: "Do users need to sign in?"
+why: "Accounts are needed for syncing to your own server or sharing between users, but they add friction."
+skip_for_beginners: false
+note: "If you offer third-party logins such as Google, App Store rules generally require an equivalent privacy-focused option like Sign in with Apple."
+last_verified: null
+options:
+  - id: none
+    name: No accounts
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "Local-only apps, or CloudKit apps, which use the user's Apple ID automatically."
+    tradeoffs: "No way to identify users across devices outside the Apple ecosystem."
+  - id: sign-in-with-apple
+    name: Sign in with Apple
+    cost: free
+    cost_note: "Requires the Apple Developer Program, like any capability you ship."
+    level: beginner
+    pick_when: "You need a user identity and your users are on Apple devices."
+    tradeoffs: "You still need somewhere to store user data, such as CloudKit or your own backend."
+    url: https://developer.apple.com/sign-in-with-apple/
+  - id: supabase-auth
+    name: Supabase Auth
+    cost: free-tier
+    cost_note: "Part of the Supabase free tier."
+    level: advanced
+    pick_when: "You chose Supabase and need email, social, or Sign in with Apple logins tied to your backend."
+    tradeoffs: "Ties accounts to Supabase."
+    url: https://supabase.com/docs/guides/auth
+    requires:
+      backend: [supabase]
