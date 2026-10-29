@@ -1,0 +1,24 @@
+id: release
+order: 11
+title: Release and signing
+question: "How do you want to sign the app and upload it to TestFlight and the App Store?"
+why: "Code signing is one of the most common sources of iOS frustration."
+skip_for_beginners: true
+note: "Uploading to TestFlight or the App Store requires the Apple Developer Program ($99/year) regardless of option."
+last_verified: null
+options:
+  - id: xcode-automatic
+    name: Xcode automatic signing
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "Most apps. Xcode manages certificates and profiles; upload with Product > Archive."
+    tradeoffs: "Manual clicks for each release; harder to automate."
+    url: https://developer.apple.com/documentation/xcode/distributing-your-app-for-beta-testing-and-releases
+  - id: fastlane
+    name: Fastlane
+    cost: free
+    level: advanced
+    pick_when: "Frequent releases, CI uploads, or teams sharing signing certificates."
+    tradeoffs: "A Ruby tool to install and maintain, with its own learning curve."
+    url: https://docs.fastlane.tools

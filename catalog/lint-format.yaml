@@ -1,0 +1,23 @@
+id: lint-format
+order: 9
+title: Lint and format
+question: "How should code style be checked?"
+why: "Automatic formatting ends style debates and keeps AI-written code consistent with yours."
+skip_for_beginners: true
+last_verified: null
+options:
+  - id: swift-format
+    name: swift-format
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "Most projects. Ships with the Xcode toolchain, so there's nothing to install."
+    tradeoffs: "Fewer lint rules than SwiftLint."
+    url: https://github.com/swiftlang/swift-format
+  - id: swiftlint-swiftformat
+    name: SwiftLint + SwiftFormat
+    cost: free
+    level: advanced
+    pick_when: "Teams that want many configurable lint rules and widely used community conventions."
+    tradeoffs: "Two tools to install and configure."
+    url: https://github.com/realm/SwiftLint

@@ -1,0 +1,31 @@
+id: ci
+order: 10
+title: Continuous integration
+question: "Should builds and tests run automatically on every change?"
+why: "CI catches broken builds before they reach users, but beginners can build locally at first."
+skip_for_beginners: true
+last_verified: 2026-10-29
+options:
+  - id: none
+    name: None (build locally)
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "Solo developers and first apps. Run tests in Xcode before shipping."
+    tradeoffs: "Nothing stops you from shipping a broken build if you forget to test."
+  - id: xcode-cloud
+    name: Xcode Cloud
+    cost: included
+    cost_note: "25 compute hours per month included with the Apple Developer Program; unused hours don't roll over."
+    level: beginner
+    pick_when: "You have the Developer Program and want CI and TestFlight uploads set up from inside Xcode."
+    tradeoffs: "Apple-only, less flexible than scriptable CI, paid beyond 25 hours."
+    url: https://developer.apple.com/xcode-cloud/
+  - id: github-actions
+    name: GitHub Actions
+    cost: free-tier
+    cost_note: "Free for public repos. Private repos get 2,000 free minutes per month, but macOS minutes count 10x (about 200 macOS minutes)."
+    level: advanced
+    pick_when: "Open-source apps, or teams who want CI scripted next to the code."
+    tradeoffs: "You configure signing and uploads yourself; private repos use up free minutes quickly."
+    url: https://docs.github.com/en/billing/concepts/product-billing/github-actions
