@@ -28,4 +28,4 @@ options:
     level: advanced
     pick_when: "Larger teams or modular apps with many targets and frameworks."
     tradeoffs: "The most to learn; the project is defined in Swift code."
-    url: https://tuist.dev
+    url: https://github.com/tuist/tuist

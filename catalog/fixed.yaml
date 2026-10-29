@@ -14,7 +14,7 @@
   area: UI tests
   choice: XCUITest
   why: "The only native way to drive the app's UI in tests."
-  url: https://developer.apple.com/documentation/xctest/user-interface-tests
+  url: https://developer.apple.com/documentation/xctest/user_interface_tests
 
 - id: localization
   area: Localization
