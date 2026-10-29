@@ -1,0 +1,34 @@
+- id: package-manager
+  area: Package manager
+  choice: Swift Package Manager
+  why: "Built into Xcode. CocoaPods is in maintenance mode and Carthage is rarely used."
+  url: https://www.swift.org/documentation/package-manager/
+
+- id: unit-tests
+  area: Unit tests
+  choice: Swift Testing
+  why: "Apple's modern test framework, built into Xcode, with clearer syntax than XCTest."
+  url: https://developer.apple.com/xcode/swift-testing/
+
+- id: ui-tests
+  area: UI tests
+  choice: XCUITest
+  why: "The only native way to drive the app's UI in tests."
+  url: https://developer.apple.com/documentation/xctest/user-interface-tests
+
+- id: localization
+  area: Localization
+  choice: String Catalogs
+  why: "Built into Xcode. Strings are collected automatically, even if you only ship one language."
+  url: https://developer.apple.com/documentation/xcode/localizing-and-varying-text-with-a-string-catalog
+
+- id: icons
+  area: Icons
+  choice: SF Symbols
+  why: "Thousands of free icons that match the system and scale with Dynamic Type."
+  url: https://developer.apple.com/sf-symbols/
+
+- id: ai-conventions
+  area: AI conventions
+  choice: CLAUDE.md / AGENTS.md in the generated app
+  why: "Records the choices made here so AI coding agents follow them instead of inventing new ones."
