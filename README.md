@@ -92,3 +92,7 @@ it weekly.
 - [ ] Questionnaire (beginner path: accept all defaults; advanced path: ask everything)
 - [ ] App template generated from the answers
 - [ ] `make new`, `make run`, `make test`, `make ship`
+
+## License
+
+MIT
