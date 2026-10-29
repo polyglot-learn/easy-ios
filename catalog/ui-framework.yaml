@@ -1,0 +1,23 @@
+id: ui-framework
+order: 1
+title: UI framework
+question: "How do you want to build the screens?"
+why: "This shapes almost every file in the app and what tutorials will apply to you."
+skip_for_beginners: true
+last_verified: null
+options:
+  - id: swiftui
+    name: SwiftUI
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "New apps. Less code, live previews, and it's where Apple is investing."
+    tradeoffs: "Some highly custom UI still needs a UIKit bridge."
+    url: https://developer.apple.com/xcode/swiftui/
+  - id: uikit
+    name: UIKit
+    cost: free
+    level: advanced
+    pick_when: "You're joining an existing UIKit codebase or need precise control over complex UI."
+    tradeoffs: "More code, no live previews by default, slower to build simple screens."
+    url: https://developer.apple.com/documentation/uikit

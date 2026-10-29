@@ -1,0 +1,33 @@
+id: architecture
+order: 4
+title: Architecture
+question: "How should app logic and state be organized?"
+why: "A consistent structure makes the app easier to grow, test, and hand to an AI agent."
+skip_for_beginners: true
+last_verified: null
+options:
+  - id: mv
+    name: MV with @Observable
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "Most SwiftUI apps. Views read @Observable models directly, with the least boilerplate."
+    tradeoffs: "Needs discipline to keep logic out of views as the app grows."
+    url: https://developer.apple.com/documentation/observation
+    requires:
+      ui-framework: [swiftui]
+  - id: mvvm
+    name: MVVM
+    cost: free
+    level: advanced
+    pick_when: "Teams used to MVVM, or UIKit apps, or when you want a view model per screen for testing."
+    tradeoffs: "More files and boilerplate than MV for simple screens."
+  - id: tca
+    name: The Composable Architecture (TCA)
+    cost: free
+    level: advanced
+    pick_when: "Large apps that need strict, predictable state management and exhaustive testing."
+    tradeoffs: "Steep learning curve and a third-party dependency at the core of the app."
+    url: https://github.com/pointfreeco/swift-composable-architecture
+    requires:
+      ui-framework: [swiftui]

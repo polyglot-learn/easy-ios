@@ -1,0 +1,21 @@
+id: min-ios
+order: 2
+title: Minimum iOS version
+question: "What's the oldest iOS version the app should run on?"
+why: "Older versions reach more devices; newer versions unlock newer APIs."
+skip_for_beginners: true
+last_verified: null
+options:
+  - id: ios17
+    name: iOS 17
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "Most apps. It's the oldest version with SwiftData and @Observable, which the defaults rely on."
+    tradeoffs: "You can't use APIs added after iOS 17 without availability checks."
+  - id: latest
+    name: Latest iOS only
+    cost: free
+    level: advanced
+    pick_when: "You want the newest APIs without availability checks and can accept a smaller audience."
+    tradeoffs: "Excludes users who haven't updated or whose devices can't."

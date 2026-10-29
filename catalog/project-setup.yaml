@@ -1,0 +1,31 @@
+id: project-setup
+order: 3
+title: Project setup
+question: "How should the Xcode project file be managed?"
+why: "The .xcodeproj file is hard to read and causes merge conflicts when several people edit it."
+skip_for_beginners: true
+last_verified: null
+options:
+  - id: xcode
+    name: Plain Xcode project
+    default: true
+    cost: free
+    level: beginner
+    pick_when: "Solo developers and beginners. Everything happens in Xcode, nothing extra to learn."
+    tradeoffs: "Merge conflicts in project.pbxproj when working in a team."
+    url: https://developer.apple.com/documentation/xcode/creating-an-xcode-project-for-an-app
+  - id: xcodegen
+    name: XcodeGen
+    cost: free
+    level: advanced
+    pick_when: "Small teams who want the project defined in a readable YAML file with no merge conflicts."
+    tradeoffs: "One more tool to install; you regenerate the project after changing the YAML."
+    url: https://github.com/yonaskolb/XcodeGen
+  - id: tuist
+    name: Tuist
+    cost: free
+    cost_note: "The project generator is free and open source; some hosted features are paid."
+    level: advanced
+    pick_when: "Larger teams or modular apps with many targets and frameworks."
+    tradeoffs: "The most to learn; the project is defined in Swift code."
+    url: https://tuist.dev
