@@ -1,8 +1,17 @@
 # easy-ios
 
 A catalog of iOS development decisions, each limited to 2–3 options with a free,
-beginner-friendly default. A questionnaire and an app template will be built on
-top of it.
+beginner-friendly default, plus a generator (`make new`) that applies the
+defaults and ten example apps in `examples/` built with them. A questionnaire
+will be built on top of the catalog.
+
+## Rules when editing apps (`examples/`, `scripts/new_app.py`)
+
+- Use only the catalog defaults. No third-party packages in the examples.
+- Each app's own `CLAUDE.md` lists its conventions; follow it.
+- Run `make test APP=examples/<App>` for any app you change, and `make lint`
+  (run `make format` first). UI tests must not touch the network.
+- Don't hand-edit `project.pbxproj`; change `scripts/new_app.py` and regenerate.
 
 ## Rules when editing `catalog/`
 
