@@ -5,7 +5,7 @@ question: "Do users need to sign in?"
 why: "Accounts are needed for syncing to your own server or sharing between users, but they add friction."
 skip_for_beginners: false
 note: "If you offer third-party logins such as Google, App Store rules generally require an equivalent privacy-focused option like Sign in with Apple."
-last_verified: null
+last_verified: 2026-10-29
 options:
   - id: none
     name: No accounts
@@ -25,7 +25,7 @@ options:
   - id: supabase-auth
     name: Supabase Auth
     cost: free-tier
-    cost_note: "Part of the Supabase free tier."
+    cost_note: "Free plan includes 50,000 monthly active users."
     level: advanced
     pick_when: "You chose Supabase and need email, social, or Sign in with Apple logins tied to your backend."
     tradeoffs: "Ties accounts to Supabase."

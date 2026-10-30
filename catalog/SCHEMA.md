@@ -43,8 +43,8 @@ options:
    default's `requires`.
 5. `requires` refers only to decisions and options that exist.
 6. `id` matches the filename; ids and `order` values are unique.
-7. A decision with any non-`free` option needs `last_verified`. A missing date
-   or one older than 180 days is a warning, not an error.
+7. Every decision has a `last_verified` field. When any option is not `free`,
+   a `null` date or one older than 180 days is a warning, not an error.
 
 ## Fixed defaults (`catalog/fixed.yaml`)
 

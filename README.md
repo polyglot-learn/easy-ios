@@ -83,9 +83,16 @@ default, or an option that depends on a choice that doesn't exist. It warns
 when pricing information hasn't been verified, or was verified more than 180
 days ago.
 
+`make check-links` checks that every link in the catalog still loads. CI runs
+it weekly.
+
 ## Roadmap
 
 - [x] Decision catalog
 - [ ] Questionnaire (beginner path: accept all defaults; advanced path: ask everything)
 - [ ] App template generated from the answers
 - [ ] `make new`, `make run`, `make test`, `make ship`
+
+## License
+
+MIT

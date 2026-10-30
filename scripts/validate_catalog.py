@@ -37,6 +37,9 @@ def check_fixed(path):
         return
     seen = set()
     for i, entry in enumerate(entries):
+        if not isinstance(entry, dict):
+            errors.append(f"{path.name}[{i}]: must be a mapping")
+            continue
         missing = FIXED_FIELDS - entry.keys()
         if missing:
             errors.append(f"{path.name}[{i}]: missing {sorted(missing)}")
@@ -54,6 +57,9 @@ def check_decision(path, d):
         errors.append(f"{name}: id {d.get('id')!r} must match the filename")
 
     options = d.get("options") or []
+    if not isinstance(options, list) or not all(isinstance(o, dict) for o in options):
+        errors.append(f"{name}: options must be a list of mappings")
+        d["options"] = options = []
     if not 2 <= len(options) <= 3:
         errors.append(f"{name}: has {len(options)} options; must have 2 or 3")
 
@@ -92,13 +98,20 @@ def check_decision(path, d):
 
 def check_requires(decisions):
     defaults = {
-        d["id"]: next((o["id"] for o in d.get("options", []) if o.get("default")), None)
-        for d in decisions.values()
+        key: next((o.get("id") for o in d.get("options", []) if o.get("default")), None)
+        for key, d in decisions.items()
     }
-    for d in decisions.values():
+    for key, d in decisions.items():
         for o in d.get("options", []):
-            label = f"{d['id']}.yaml/{o.get('id')}"
-            for dep, allowed in (o.get("requires") or {}).items():
+            label = f"{key}.yaml/{o.get('id')}"
+            requires = o.get("requires") or {}
+            if not isinstance(requires, dict):
+                errors.append(f"{label}: requires must map decision ids to lists of option ids")
+                continue
+            for dep, allowed in requires.items():
+                if not isinstance(allowed, list):
+                    errors.append(f"{label}: requires.{dep} must be a list of option ids")
+                    continue
                 if dep not in decisions:
                     errors.append(f"{label}: requires unknown decision {dep!r}")
                     continue
