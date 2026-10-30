@@ -1,4 +1,4 @@
-.PHONY: validate check-links new test test-examples
+.PHONY: validate check-links new test test-examples format lint
 
 validate:
 	python3 scripts/validate_catalog.py
@@ -18,3 +18,9 @@ test:
 
 test-examples:
 	@for app in examples/*/; do bash scripts/test_app.sh "$${app%/}" || exit 1; done
+
+format:
+	xcrun swift-format format --in-place --recursive --parallel examples scripts/make_icon.swift
+
+lint:
+	xcrun swift-format lint --strict --recursive --parallel examples scripts/make_icon.swift
