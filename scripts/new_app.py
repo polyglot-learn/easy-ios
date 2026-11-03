@@ -34,14 +34,20 @@ def uid(name, key):
     return hashlib.md5(f"{name}:{key}".encode()).hexdigest()[:24].upper()
 
 
-def pbxproj(name, display, category):
+DEVICE_FAMILY = {"universal": "1,2", "iphone": "1", "ipad": "2"}
+IPAD_ORIENTATIONS = ("UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown "
+                     "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight")
+IPHONE_ORIENTATIONS = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+
+
+def pbxproj(name, display, category, devices="universal", bundle=None):
     i = {k: uid(name, k) for k in [
         "project", "main", "products", "projlist", "projdebug", "projrelease",
         "app", "app.product", "app.group", "app.src", "app.fw", "app.res", "app.list", "app.debug", "app.release",
         "ut", "ut.product", "ut.group", "ut.src", "ut.fw", "ut.res", "ut.list", "ut.debug", "ut.release", "ut.dep", "ut.proxy",
         "ui", "ui.product", "ui.group", "ui.src", "ui.fw", "ui.res", "ui.list", "ui.debug", "ui.release", "ui.dep", "ui.proxy",
     ]}
-    bundle = f"{BUNDLE_PREFIX}.{name.lower()}"
+    bundle = bundle or f"{BUNDLE_PREFIX}.{name.lower()}"
 
     common = """				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -52,7 +58,14 @@ def pbxproj(name, display, category):
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";"""
+				TARGETED_DEVICE_FAMILY = "%s";""" % DEVICE_FAMILY[devices]
+
+    orientations = []
+    if devices != "iphone":
+        orientations.append(f'				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "{IPAD_ORIENTATIONS}";')
+    if devices != "ipad":
+        orientations.append(f'				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "{IPHONE_ORIENTATIONS}";')
+    orientations = "\n".join(orientations)
 
     app_settings = f"""{common}
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -63,8 +76,7 @@ def pbxproj(name, display, category):
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+{orientations}
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -538,6 +550,9 @@ def main():
     p.add_argument("--category", required=True, choices=CATEGORIES, help="App Store category")
     p.add_argument("--symbol", default="app", help="SF Symbol for the generated icon")
     p.add_argument("--color", default="0A84FF", help="Accent and icon color as hex, e.g. 0A84FF")
+    p.add_argument("--devices", default="universal", choices=DEVICE_FAMILY,
+                   help="Devices the app runs on (default: universal)")
+    p.add_argument("--bundle-id", help=f"Bundle identifier (default: {BUNDLE_PREFIX}.<name>)")
     p.add_argument("--dir", default="apps", help="Parent directory (default: apps)")
     a = p.parse_args()
 
@@ -545,11 +560,13 @@ def main():
         sys.exit("name must start with a capital letter and contain only letters and digits")
     if not re.fullmatch(r"[0-9A-Fa-f]{6}", a.color):
         sys.exit("color must be 6 hex digits, e.g. 0A84FF")
+    if a.bundle_id and not re.fullmatch(r"[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+", a.bundle_id):
+        sys.exit("bundle id must be reverse-DNS, e.g. com.example.myapp")
     display = a.display or a.name
 
     base = ROOT / a.dir / a.name
     proj = base / f"{a.name}.xcodeproj"
-    write(proj / "project.pbxproj", pbxproj(a.name, display, a.category))
+    write(proj / "project.pbxproj", pbxproj(a.name, display, a.category, a.devices, a.bundle_id))
     write(proj / "xcshareddata" / "xcschemes" / f"{a.name}.xcscheme", scheme(a.name))
     skeleton(base, a.name, display, a.color)
 

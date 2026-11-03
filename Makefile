@@ -6,10 +6,10 @@ validate:
 check-links:
 	bash scripts/check_links.sh
 
-# make new NAME=MyApp CATEGORY=productivity [SYMBOL=star.fill] [COLOR=0A84FF]
+# make new NAME=MyApp CATEGORY=productivity [SYMBOL=star.fill] [COLOR=0A84FF] [DEVICES=ipad] [BUNDLE_ID=com.example.myapp]
 new:
-	@test -n "$(NAME)" -a -n "$(CATEGORY)" || { echo "usage: make new NAME=MyApp CATEGORY=productivity [SYMBOL=star.fill] [COLOR=0A84FF]"; exit 2; }
-	python3 scripts/new_app.py $(NAME) --category $(CATEGORY) $(if $(SYMBOL),--symbol $(SYMBOL)) $(if $(COLOR),--color $(COLOR))
+	@test -n "$(NAME)" -a -n "$(CATEGORY)" || { echo "usage: make new NAME=MyApp CATEGORY=productivity [SYMBOL=star.fill] [COLOR=0A84FF] [DEVICES=universal|iphone|ipad] [BUNDLE_ID=com.example.myapp]"; exit 2; }
+	python3 scripts/new_app.py $(NAME) --category $(CATEGORY) $(if $(SYMBOL),--symbol $(SYMBOL)) $(if $(COLOR),--color $(COLOR)) $(if $(DEVICES),--devices $(DEVICES)) $(if $(BUNDLE_ID),--bundle-id $(BUNDLE_ID))
 
 # make test APP=examples/Tasks
 test:

@@ -83,6 +83,11 @@ project targeting iOS 17, a SwiftUI app, Swift Testing and XCUITest targets, an
 app icon, a String Catalog, and a `CLAUDE.md` that tells AI agents the
 conventions. Open `apps/MyApp/MyApp.xcodeproj` in Xcode and press Run.
 
+Options: `DEVICES=ipad` (or `iphone`) for an app that runs on one kind of device
+(the default is both), and `BUNDLE_ID=com.example.myapp` to set your own bundle
+identifier before publishing. `make test` runs iPad-only apps on an iPad
+simulator.
+
 The project uses folder-synchronized groups, so files you add to the app or test
 folders are picked up automatically and the project file rarely changes.
 
