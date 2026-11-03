@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Build an app and run its unit and UI tests on an available iPhone simulator.
+# Build an app and run its unit and UI tests on an available simulator: an iPhone,
+# or an iPad when the app is iPad-only (TARGETED_DEVICE_FAMILY = 2).
 # Usage: scripts/test_app.sh examples/Tasks [extra xcodebuild args, e.g. -only-testing:TasksUITests]
 set -euo pipefail
 
@@ -9,17 +10,23 @@ name=$(basename "$dir")
 out=${DERIVED_DATA:-build/$name}
 results="$out/results.xcresult"
 
-# Prefer an iPhone on the newest installed iOS runtime.
-device=$(xcrun simctl list devices available --json | python3 -c '
-import json, sys
+family=iPhone
+if grep -Eq 'TARGETED_DEVICE_FAMILY = "?2"?;' "$dir/$name.xcodeproj/project.pbxproj"; then
+  family=iPad
+fi
+
+# Prefer a device of that family on the newest installed iOS runtime.
+device=$(xcrun simctl list devices available --json | FAMILY=$family python3 -c '
+import json, os, sys
+family = os.environ["FAMILY"]
 runtimes = json.load(sys.stdin)["devices"]
 for runtime in sorted(runtimes, key=lambda r: [int(x) for x in r.split("iOS-")[-1].split("-") if x.isdigit()], reverse=True):
     if "iOS" not in runtime:
         continue
     for d in runtimes[runtime]:
-        if d["name"].startswith("iPhone"):
+        if d["name"].startswith(family):
             print(d["udid"]); sys.exit()
-sys.exit("no available iPhone simulator")
+sys.exit(f"no available {family} simulator")
 ')
 
 run_tests() {
